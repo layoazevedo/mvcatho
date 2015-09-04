@@ -3,18 +3,24 @@
 namespace MvCatho\Controller;
 
 use MvCatho\System\ControllerAbstract;
+use MvCatho\Model\Funcionario;
 use MvCatho\Model\Pessoas;
 
 class TesteController extends ControllerAbstract
 {
     public function comprimentar()
     {
-        $model = new Pessoas();
+        $funcionario = new Funcionario();
+        $dados['func'] = $funcionario->getAll();
+        
+        $this->view('comprimentar', $dados);
+        
+        /*$model = new Pessoas();
         $dados['cargo'] = $model->getCargoPorPessoa('burgo');
         
         $this->view('comprimentar', $dados);
         
-        /*print "<pre>";
+        print "<pre>";
         var_dump($model);
         print "<hr />";
         print_r($model->getPessoasPorCargo('arquitetos'));

@@ -2,7 +2,9 @@
 
 namespace MvCatho\Model;
 
-class Pessoas
+use MvCatho\System\AbstractModel;
+
+class Pessoas extends AbstractModel
 {
     private $devel = array(
         'front-end' => array (
