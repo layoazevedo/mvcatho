@@ -10,17 +10,18 @@ class TesteController extends ControllerAbstract
 {
     public function comprimentar()
     {
-        $funcionario = new Funcionario();
+        /*$funcionario = new Funcionario();
         $dados['func'] = $funcionario->getAll();
         
-        $this->view('comprimentar', $dados);
+        $this->view('comprimentar', $dados);*/
         
-        /*$model = new Pessoas();
-        $dados['cargo'] = $model->getCargoPorPessoa('burgo');
+        //$model = new Pessoas();
+        //$dados['cargo'] = $model->getCargoPorPessoa('burgo');
         
-        $this->view('comprimentar', $dados);
+        $array = array();
+        $this->view('comprimentar', $array);
         
-        print "<pre>";
+        /*print "<pre>";
         var_dump($model);
         print "<hr />";
         print_r($model->getPessoasPorCargo('arquitetos'));
